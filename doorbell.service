@@ -1,0 +1,15 @@
+[Unit]
+Description=doorbell
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=python /home/lysgaard/doorbell/doorbell_server.py
+Restart=always
+User=lysgaard
+Group=lysgaard
+WorkingDirectory=/home/lysgaard/doorbell/
+
+[Install]
+WantedBy=multi-user.target
+
