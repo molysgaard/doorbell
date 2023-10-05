@@ -2,7 +2,7 @@ import json
 import socket
 
 def trigger_doorbell():
-    UDP_IP = "127.0.0.1"
+    UDP_IP = socket.gethostbyname('raspberrypi.local')
     UDP_PORT = 5005
     MESSAGE = json.dumps({'event':'doorbell'}).encode('utf-8')
 
